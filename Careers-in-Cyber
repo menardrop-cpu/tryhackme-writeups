@@ -1,0 +1,52 @@
+# Careers in Cyber
+
+**Platform** : TryHackMe
+**Difficulty** : Easy
+**Time** : 30 min
+**Status** : Completed 100%
+
+## Objective
+
+Explore the different career paths in cybersecurity and understand
+what each role involves day to day.
+
+## Tasks covered
+
+* Task 1 : Introduction
+* Task 2 : Security Analysis
+* Task 3 : Security Engineering
+* Task 4 : Penetration Testing
+* Task 5 : Interactive Career Quiz
+
+## Key roles covered
+
+* Security Analyst (blue team) : monitors, investigates and responds to alerts
+* Security Engineer : builds and maintains the tools and systems that protect
+the organisation
+* Penetration Tester : simulates attacks to find vulnerabilities before
+real attackers do
+* Incident Responder : handles active attacks in real time, high pressure
+* Malware Analyst : reverse engineers malicious code to understand attacker tools
+
+## Career quiz result
+
+The quiz returned Incident Responder as my closest match.
+
+Honest reading of that : it reflects my pattern recognition, structured
+thinking under pressure and ability to piece together fragmented information
+quickly. These are transferable traits, not a career sentence.
+
+My actual target remains GRC and pre-sales cyber. The Incident Responder
+profile confirms I have the analytical instincts that make a GRC consultant
+credible when assessing whether an organisation's detection and response
+capabilities are actually fit for purpose, and that make a pre-sales engineer
+convincing when a prospect pushes back technically.
+
+## Takeaway
+
+The career landscape in cyber is wider than SOC vs pentest. The most
+interesting positions sit at the intersection of technical understanding
+and business communication, which is exactly where GRC and pre-sales live.
+Knowing what analysts and responders actually do makes it easier to speak
+their language and translate their operational reality into risk decisions
+that executives can act on.
