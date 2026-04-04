@@ -1,0 +1,157 @@
+# Operating Systems: Introduction
+
+**Platform** : TryHackMe  
+**Module** : Operating Systems Basics  
+
+---
+
+## Objective
+
+Understand what an operating system is, the role it plays between hardware and applications, its core responsibilities, privilege separation, and how to interact with it through GUI and CLI.
+
+---
+
+## Task 1 — Introduction
+
+An operating system is the invisible layer that ties all computer components together. Without it, every application would need to directly manage hardware, causing conflicts and instability.
+
+---
+
+## Task 2 — The Invisible Manager
+
+### What is an OS?
+
+The OS is the core software that sits between the user, applications, and physical hardware. It acts as a central coordinator that keeps the entire machine running as one unified system.
+
+**The airport analogy:**
+
+| Airport element | Computer equivalent |
+|---|---|
+| Runways, radar, fuel systems | Hardware (CPU, RAM, storage) |
+| Airlines and passengers | Applications |
+| Air traffic control system | Operating System |
+
+Without the OS, applications would conflict over hardware resources — just as airlines would collide without air traffic control.
+
+### System Privilege Layers
+
+Modern operating systems enforce a strict separation between privileged and restricted areas:
+
+**Kernel space**
+* The highly privileged core of the OS
+* Where the kernel runs — the component that directly manages hardware and system resources
+* Has unrestricted access to CPU, memory, storage, and all hardware
+* Equivalent to the control tower — only trusted controllers operate here
+
+**User space**
+* Where all standard applications run
+* Applications are prevented from accessing hardware directly
+* Must make **system calls** to request the kernel acts on their behalf
+* Equivalent to airlines and passengers — they radio requests to the tower, they cannot enter it
+
+This separation ensures one faulty application cannot crash the entire system.
+
+### Operating System Duties
+
+| Responsibility | What it does | Example |
+|---|---|---|
+| Process Management | Creates, schedules, prioritises, and terminates running programs | Multiple apps open simultaneously without freezing |
+| Memory Management | Allocates RAM to processes, protects memory between apps, uses virtual memory when RAM is low | Opening many apps — each gets isolated RAM |
+| File System Management | Organises files into directories, manages naming, paths, permissions, metadata | Creating folders, saving files, setting read-only permissions |
+| User Management | Handles multiple accounts, authentication, and permissions | Login passwords keeping files inaccessible to other users |
+| Device Management | Loads drivers, provides hardware abstraction layer | Plugging in a mouse or printer and having it work instantly |
+
+### OS Security Foundation
+
+Before any antivirus or firewall, the OS already enforces:
+
+* **Authentication**: verifies identity via passwords and biometrics
+* **Permissions**: controls what each user and app can read, write, or execute
+* **Isolation**: keeps every process in its own protected space
+* **System protection**: safeguards critical system files from unauthorised changes
+
+### Task answers
+
+**Q: Which OS space has unrestricted access to your computer's hardware?**  
+`Kernel Space`
+
+**Q: Which OS responsibility manages user accounts, authentication, and permissions?**  
+`User Management`
+
+**Q: What version of Ubuntu Mate is the computer running?**  
+[from VM — format X.X.X]
+
+**Q: How much memory is allocated to the machine?**  
+[from VM — Hardware section]
+
+---
+
+## Task 3 — OS Interaction and Landscape
+
+### OS Interfaces
+
+**GUI (Graphical User Interface)**
+* Visual representation of the system — icons, windows, menus
+* Familiar and intuitive — no syntax required
+* Analogy: tapping a destination in a navigation app
+
+**CLI (Command-Line Interface)**
+* Text-based commands to retrieve or manipulate information
+* More precise, faster for advanced tasks, requires command knowledge
+* Analogy: entering exact GPS coordinates — direct and accurate if you know the syntax
+
+Both can retrieve the same information. The choice depends on context and complexity of the task.
+
+### Operating System Types
+
+| OS Type | Primary use case | Key characteristics |
+|---|---|---|
+| Desktop | Personal computers, daily work, gaming | Rich GUI, multitasking, user-focused |
+| Server | Web hosting, databases, cloud, back-end | Headless (no GUI), maximum uptime, multi-user, remote access |
+| Mobile | Smartphones and tablets | Touch UI, power efficient, always connected, app sandboxing |
+| Embedded | Appliances, cars, IoT, routers | Tiny footprint, limited hardware |
+| Virtual / Cloud | VMs, containers, cloud instances | Lightweight, scalable, rapid deployment |
+
+### Real-World Operating Systems
+
+**Desktop**
+* Windows: Windows 10, Windows 11
+* macOS: Sonoma (14), Sequoia (15), Tahoe (26)
+* Linux: Ubuntu, Debian, Fedora
+
+**Server**
+* Windows Server: 2016, 2019, 2022, 2025
+* Linux: Ubuntu Server, Debian, CentOS, Red Hat
+* Unix: IBM AIX, Oracle Solaris
+
+**Mobile**
+* Android: versions 14–16
+* iOS: versions 17, 18, 26
+
+**Embedded / IoT**
+* Embedded Linux: OpenWrt, Ubuntu Core, Yocto Project
+* Real-Time OS: FreeRTOS, VxWorks, QNX
+
+**Virtual / Cloud**
+* Cloud/VM: Ubuntu LTS, Amazon Linux, Rocky Linux
+* Container-optimised: Alpine Linux, Bottlerocket AWS, Flatcar Linux
+
+### Practical investigation
+
+System under investigation: Ubuntu Linux (gifted machine)
+
+* File Systems tab → `/dev/root` type: [from VM]
+* Home directory user count: [from VM]
+* Flag in Alex's Documents/note.txt: [from VM]
+
+---
+
+## Task 4 — Key Concepts Summary
+
+| Term | Definition |
+|---|---|
+| Operating System (OS) | Core software that manages hardware, applications, and all system resources |
+| Kernel space | Privileged OS area with direct hardware access — home of the kernel |
+| User space | Area where regular applications run with limited permissions |
+| GUI | Visual interface — windows, icons, menus — interaction via clicking |
+| CLI | Text-based interface — type commands for precision and speed |
